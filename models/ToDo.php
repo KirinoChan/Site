@@ -1,16 +1,6 @@
 <?php
 class toDo
 {
-    public static function getToDoItemById($id)
-    {
-        $id = intval($id);
-        if ($id) {
-            $db = Db::getConnection();
-            $result = $db->query('SELECT * from news WHERE id = ' . $id);
-            $newsItem = $result->fetch(PDO::FETCH_ASSOC);
-            return $newsItem;
-        }
-    }
 
     public static function getToDoList($page)
     {
