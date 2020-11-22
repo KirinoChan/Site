@@ -12,7 +12,7 @@ class toDo
         $count = $st->rowCount();
         $total = intval(($count - 1) / $num) + 1;
 
-        if (empty($_SESSION['sortType']) || $_SESSION['sortType'] == 'id') {
+       if (empty($_SESSION['sortType']) || $_SESSION['sortType'] == 'id') {
             $result = $db->query("SELECT id,title,date,name,email,text,edited_by_admin, is_done from todo order by id desc limit $start, $num");
         }
 
@@ -26,6 +26,18 @@ class toDo
 
         if ($_SESSION['sortType'] == 'status') {
             $result = $db->query("SELECT id,title,date,name,email,text,edited_by_admin, is_done from todo order by edited_by_admin asc limit $start, $num");
+        }
+        
+        if($_SESSION['sortType'] == 'nameDesc') {
+             $result = $db->query("SELECT id,title,date,name,email,text,edited_by_admin, is_done from todo order by name desc limit $start, $num");
+        }
+        
+          if($_SESSION['sortType'] == 'emailDesc') {
+             $result = $db->query("SELECT id,title,date,name,email,text,edited_by_admin, is_done from todo order by email desc limit $start, $num");
+        }
+        
+         if($_SESSION['sortType'] == 'statusDesc') {
+             $result = $db->query("SELECT id,title,date,name,email,text,edited_by_admin, is_done from todo order by edited_by_admin desc limit $start, $num");
         }
 
         $i = 0;
