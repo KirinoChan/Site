@@ -20,6 +20,9 @@
           <option value="email">E-mail</option>
           <option value="status">Статусу</option>
           <option value="id">ID</option>
+          <option value="nameDesc">Имени пользователя по убыванию</option>
+          <option value="emailDesc">Emaill по убыванию</option>
+          <option value="statusDesc">Статусу по убыванию</option>
         </select>
       </div>
 
