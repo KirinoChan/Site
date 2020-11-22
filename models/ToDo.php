@@ -71,12 +71,6 @@ class toDo
         $todo->addTodo($name, $email, $title, $text, $db);
     }
 
-    public static function makeSort($sortType)
-    {
-        session_start();
-        setcookie("sortType", $sortType, time() * 3600);
-    }
-
     public static function editTodo($id,$name,$email,$title,$text,$check) {
         $db = Db::getConnection();
         $todo = new ToDoList;
