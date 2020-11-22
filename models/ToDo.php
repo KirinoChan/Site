@@ -1,7 +1,6 @@
 <?php
 class toDo
 {
-
     public static function getToDoList($page)
     {
         $db = Db::getConnection();
