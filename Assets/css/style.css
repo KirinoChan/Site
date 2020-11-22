@@ -1,0 +1,51 @@
+
+input:disabled {
+    background-color: none;
+    border: none;
+}
+
+textarea:disabled {
+    border: none;
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+
+.modal {
+    margin: 150px;
+    width: 360px !important;
+    height: 500px !important;
+    overflow: visible !important;
+}
+
+#loginDanger {
+    display: none;
+}
+
+#passDanger {
+    display: none;
+}
+
+#loginSubmitGif {
+    display: none;
+    width: 300px;
+    overflow: hidden;
+    background-size: contain;
+}
+
+#editCheckGroup {
+    display: none;
+}
+
+.form-admin {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    margin: 6px;
+}
+
