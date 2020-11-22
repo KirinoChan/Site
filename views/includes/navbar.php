@@ -62,7 +62,7 @@
           <div class="input-group-prepend">
             <div class="input-group-text">Password</div>
           </div>
-          <input type="text" class="form-control" id="pass" placeholder="Username">
+          <input type="text" class="form-control" id="pass" placeholder="password">
         </div>
       </div>
       <div class="col-auto">
