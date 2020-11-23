@@ -34,21 +34,21 @@ class ToDoList
                 if ($check == 0) {
                     $st = $db->prepare("update todo set name = :name, title = :title, email = :email, text = :text, edited_by_admin = 1 where id = :id");
                     $st->execute(array("name" => $name, "title" => $title, "email" => $email, "text" => $text, "id" => $id));
-                    header('Location:/BeeJee/1');
+                    header('Location:/1');
                 } else {
                     $st = $db->prepare("update todo set name = :name, title = :title, email = :email, text = :text, edited_by_admin = 1, is_done = 1 where id = :id");
                     $st->execute(array("name" => $name, "title" => $title, "email" => $email, "text" => $text, "id" => $id));
-                    header('Location:/BeeJee/1');
+                    header('Location:/1');
                 }
             } else {
                 if ($check == 0) {
                     $st = $db->prepare("update todo set name = :name, title = :title, email = :email, text = :text, is_done = 0 where id = :id");
                     $st->execute(array("name" => $name, "title" => $title, "email" => $email, "text" => $text, "id" => $id));
-                    header('Location:/BeeJee/1');
+                    header('Location:/1');
                 } else {
                     $st = $db->prepare("update todo set name = :name, title = :title, email = :email, text = :text, is_done = 1 where id = :id");
                     $st->execute(array("name" => $name, "title" => $title, "email" => $email, "text" => $text, "id" => $id));
-                    header('Location:/BeeJee/1');
+                    header('Location:/1');
                 }
             }
         }
